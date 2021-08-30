@@ -1,0 +1,53 @@
+body{
+    background-color: orangered;
+}
+
+.flex{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin: 20px;
+}
+
+.img{
+    height: 20px;
+    width: 20px;
+}
+
+.player1{
+    width: 50%;
+    float: left;
+}
+
+.player2{
+    width: 50%;
+    float: left;
+}
+
+.player-name{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: xxx-large;
+}
+
+.player-total-score{
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: lighter;
+    font-size: xxx-large;
+}
+
+.current-score-menu{
+    background-color: red;
+    margin: 50px;
+}
+
+.current{
+    background-color: silver;
+    font-weight: bolder;
+}
+

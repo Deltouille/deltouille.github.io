@@ -8,8 +8,8 @@
         <title>Dynamiser vos sites web avec Javascript - Evaluation Studi</title>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="player1">
+        <div class="flex">
+            <div class="player1 current">
                 <div id="player1-name" class="player-name">Player 1</div>
                 <div id="player1-total-score" class="player-total-score">0</div>
                 <div class="current-score-menu">
@@ -28,7 +28,14 @@
 
             <button class="btn-ng"><i class="fas fa-undo"></i>New Game</button>
             <button class="btn-roll"><i class="fas fa-dice"></i>Roll Dice</button>
-            <button class="btn-hold">Hold</button>
+            <button class="btn-hold"><i class="fas fa-save"></i>Hold</button>
+
+            <img src="images/dice-one-solid.svg" id="dice1" class="img">
+            <img src="images/dice-two-solid.svg" id="dice2" class="img">
+            <img src="images/dice-three-solid.svg" id="dice3" class="img">
+            <img src="images/dice-four-solid.svg" id="dice4" class="img">
+            <img src="images/dice-five-solid.svg" id="dice5" class="img">
+            <img src="images/dice-six-solid.svg" id="dice6" class="img">
         </div>
     </body>
 </html>
