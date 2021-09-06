@@ -5,16 +5,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="style.css">
+        <script src="https://use.fontawesome.com/12d7f6ab38.js"></script>
         <title>Dynamiser vos sites web avec Javascript - Evaluation Studi</title>
     </head>
     <body class="bg-white bg-cover bg-center relative h-screen">
         <div class="items-center mt-5 m-20 justify-center bg-white">
             <div class="w-1/3 float-left bg-white current" id="player1">
                 <div id="player1-name" class="text-center uppercase font-extralight text-6xl">Player 1</div>
-                <div id="player1-total-score" class="text-red-500 uppercase text-center font-extralight text-6xl mt-10">0</div>
+                <div id="player1-global-score" class="text-red-500 uppercase text-center font-extralight text-6xl mt-10">0</div>
                 <div class="bg-red-500 m-auto box-border w-2/5">
-                    <div class="text-black font-light box-content text-center text-4xl mt-10">Current</div>
-                    <div id="player1-current-score" class="text-white font-bold box-content text-center text-4xl mt-2">0</div>
+                    <div class="text-black font-light box-content text-center text-4xl mt-10">round</div>
+                    <div id="player1-round-score" class="text-white font-bold box-content text-center text-4xl mt-2">0</div>
                 </div>
             </div>
             <div class="w-1/3 float-left bg-white">
@@ -23,11 +24,11 @@
                 <button type="button" id="btn-hold" class="block relative left-1/2 translate-x-0\.5 uppercase font-light top-1/2"><i class="fas fa-save"></i>Hold</button>    
             </div>
             <div class="w-1/3 float-left bg-white" id="player2">
-                <div id="player2-name" class="text-center uppercase font-extralight text-6xl">Player 2</div>
-                <div id="player2-total-score" class="text-red-500 uppercase text-center font-extralight text-6xl mt-10">0</div>
+                <div id="player2-name" class="text-center uppercase font-extralight text-6xl inactiveplayer">Player 2</div>
+                <div id="player2-global-score" class="text-red-500 uppercase text-center font-extralight text-6xl mt-10">0</div>
                 <div class="bg-red-500 m-auto box-border w-2/5">
-                    <div class="text-black font-light box-content text-center text-4xl mt-10">Current</div>
-                    <div id="player2-current-score" class="text-white font-bold box-content text-center text-4xl mt-2">0</div>
+                    <div class="text-black font-light box-content text-center text-4xl mt-10">round</div>
+                    <div id="player2-round-score" class="text-white font-bold box-content text-center text-4xl mt-2">0</div>
                 </div>
             </div>
             <div class="dice">
