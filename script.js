@@ -38,6 +38,8 @@ document.getElementById('btn-ng').addEventListener('click', function(){
 document.getElementById('btn-roll').addEventListener('click', function(){
     //Onn génère un entier aléatoire entre 1 et 6
     dice = Math.floor(Math.random()*(6-1)+1);
+    //On switch jusqu'a tomber sur la valeur du dé et on affiche le dé en question tout en cachant les autres
+    //On ajoute la valeur du dé au score courant
     switch(dice){
         case 1:
             document.getElementById('dice1').style.display = "block";
@@ -97,6 +99,11 @@ document.getElementById('btn-roll').addEventListener('click', function(){
 
     console.log('score = ' + score);
     console.log('dice = ' + dice);
+    //Si le joueur courrant est le joueur 1 alors on lui ajoute son score courrant
+    //Et si le joueur courrant est le joueur 1 et qu'il tire le dé 1 on met son score courant a 0 et on passe au joueur 2
+    //SINON
+    //Si le joueur courrant est le joueur 2 alors on lui ajoute son score courrant
+    //Et si le joueur courrant est le joueur 2 et qu'il tire le dé 1 on met son score courant a 0 et on passe au joueur 2
     if(document.getElementById('player1').classList.contains('current')){
         if(dice == 1){
             score = 0;
@@ -125,6 +132,9 @@ document.getElementById('btn-roll').addEventListener('click', function(){
 
 document.getElementById('btn-hold').addEventListener('click', function(){
     console.log(score);
+    //Si le joueur courrant est le joueur 1 alors on ajoute son score courrant au score global, on remet son score courant a 0 et on passe au joueur 2
+    //SINON
+    //Si le joueur courrant est le joueur 2 alors on ajoute son score courrant au score global, on remet son score courant a 0 et on passe au joueur 1
     if(document.getElementById('player1').classList.contains('current')){
         scoreglobalJoueur1 = scoreglobalJoueur1 + score;
         score = 0;
@@ -144,7 +154,9 @@ document.getElementById('btn-hold').addEventListener('click', function(){
         document.getElementById('player1-name').classList.toggle('inactiveplayer');
         document.getElementById('player2-name').classList.toggle('inactiveplayer');
     }
-    
+    //Si le score du joueur 1 est supérieur ou égal a 100 alors on affiche un message disant qu'il a gagner et on remet tout a 0 
+    //SINON
+    //Si le score du joueur 2 est supérieur ou égal a 100 alors on affiche un message disant qu'il a gagner et on remet tout a 0 
     if(scoreglobalJoueur1 >= 100){
         alert('Le Joueur 1 a gagner la partie');
         score = 0;
