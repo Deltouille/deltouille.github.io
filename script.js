@@ -129,6 +129,7 @@ document.getElementById('btn-hold').addEventListener('click', function(){
         scoreglobalJoueur1 = scoreglobalJoueur1 + score;
         score = 0;
         document.getElementById('player1-global-score').innerText = scoreglobalJoueur1;
+        document.getElementById('player1-round-score').innerText = 0;
         document.getElementById('player1').classList.toggle('current');
         document.getElementById('player2').classList.toggle('current');
         document.getElementById('player1-name').classList.toggle('inactiveplayer');
@@ -137,6 +138,7 @@ document.getElementById('btn-hold').addEventListener('click', function(){
         scoreglobalJoueur2 = scoreglobalJoueur2 + score;
         score = 0;
         document.getElementById('player2-global-score').innerText = scoreglobalJoueur2;
+        document.getElementById('player2-round-score').innerText = 0;
         document.getElementById('player1').classList.toggle('current');
         document.getElementById('player2').classList.toggle('current');
         document.getElementById('player1-name').classList.toggle('inactiveplayer');
@@ -147,8 +149,11 @@ document.getElementById('btn-hold').addEventListener('click', function(){
         alert('Le Joueur 1 a gagner la partie');
         score = 0;
         scoreglobalJoueur1 = 0;
+        scoreglobalJoueur2 = 0;
         document.getElementById('player1-global-score').innerText = scoreglobalJoueur1;
         document.getElementById('player1-round-score').innerText = score;
+        document.getElementById('player2-global-score').innerText = scoreglobalJoueur2;
+        document.getElementById('player2-round-score').innerText = score;
         document.getElementById('dice1').style.display = "none";
         document.getElementById('dice2').style.display = "none";
         document.getElementById('dice3').style.display = "none";
@@ -159,6 +164,9 @@ document.getElementById('btn-hold').addEventListener('click', function(){
         alert('Le Joueur 2 a gagner la partie');
         score = 0;
         scoreglobalJoueur2 = 0;
+        scoreglobalJoueur1 = 0;
+        document.getElementById('player1-global-score').innerText = scoreglobalJoueur1;
+        document.getElementById('player1-round-score').innerText = score;
         document.getElementById('player2-global-score').innerText = scoreglobalJoueur2;
         document.getElementById('player2-round-score').innerText = score;
         document.getElementById('dice1').style.display = "none";
